@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{40FBBCDE-9A95-4EA4-957A-F00777C3F26A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyControl.Data", "src\MoneyControl.Data\MoneyControl.Data.csproj", "{92756565-9EA0-4966-B4BC-764926C82BC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyControl.Business", "src\MoneyControl.Business\MoneyControl.Business.csproj", "{9F2BCA11-59CE-495E-9EF9-54E4571506CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyControl.App", "src\MoneyControl.App\MoneyControl.App.csproj", "{2B16C492-3EC5-414F-A267-9D91B4243D4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92756565-9EA0-4966-B4BC-764926C82BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92756565-9EA0-4966-B4BC-764926C82BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92756565-9EA0-4966-B4BC-764926C82BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92756565-9EA0-4966-B4BC-764926C82BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2BCA11-59CE-495E-9EF9-54E4571506CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2BCA11-59CE-495E-9EF9-54E4571506CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2BCA11-59CE-495E-9EF9-54E4571506CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2BCA11-59CE-495E-9EF9-54E4571506CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B16C492-3EC5-414F-A267-9D91B4243D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B16C492-3EC5-414F-A267-9D91B4243D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B16C492-3EC5-414F-A267-9D91B4243D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B16C492-3EC5-414F-A267-9D91B4243D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92756565-9EA0-4966-B4BC-764926C82BC6} = {40FBBCDE-9A95-4EA4-957A-F00777C3F26A}
+		{9F2BCA11-59CE-495E-9EF9-54E4571506CA} = {40FBBCDE-9A95-4EA4-957A-F00777C3F26A}
+		{2B16C492-3EC5-414F-A267-9D91B4243D4F} = {40FBBCDE-9A95-4EA4-957A-F00777C3F26A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8D040C5-FE75-49AC-92BE-C315BE7FFECA}
+	EndGlobalSection
+EndGlobal

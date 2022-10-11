@@ -27,4 +27,8 @@
     <Folder Include="Configuration\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyControl.Data\MoneyControl.Data.csproj" />
+  </ItemGroup>
+
 </Project>

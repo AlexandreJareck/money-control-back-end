@@ -3,9 +3,9 @@ using MoneyControl.Business.Models;
 
 namespace MoneyControl.Data.Context
 {
-    public class MoneyControlContext : DbContext
+    public class MoneyControlDbContext : DbContext
     {
-        public MoneyControlContext(DbContextOptions<MoneyControlContext> options) : base(options)
+        public MoneyControlDbContext(DbContextOptions<MoneyControlDbContext> options) : base(options)
         {
 
         }

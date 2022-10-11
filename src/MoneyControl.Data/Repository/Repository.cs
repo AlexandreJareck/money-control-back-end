@@ -8,10 +8,10 @@ namespace MoneyControl.Data.Repository;
 
 public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
 {
-    protected readonly MoneyControlContext Db;
+    protected readonly MoneyControlDbContext Db;
     protected readonly DbSet<TEntity> DbSet;
 
-    public Repository(MoneyControlContext db)
+    public Repository(MoneyControlDbContext db)
     {
         Db = db;
         DbSet = db.Set<TEntity>();

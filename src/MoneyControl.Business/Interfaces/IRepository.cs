@@ -11,7 +11,7 @@ public interface IRepository<TEntity> : IDisposable where TEntity : Entity
 
     Task Update(TEntity model);
 
-    Task<List<TEntity>> GEtAll();
+    Task<List<TEntity>> GetAll();
 
     Task<TEntity> GetById(Guid Id);
 

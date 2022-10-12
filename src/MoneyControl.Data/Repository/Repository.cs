@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MoneyControl.Business.Interfaces;
+using MoneyControl.Business.Interfaces.Repository;
 using MoneyControl.Business.Models;
 using MoneyControl.Data.Context;
 using System.Linq.Expressions;

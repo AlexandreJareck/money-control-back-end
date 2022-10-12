@@ -1,7 +1,7 @@
 ﻿using MoneyControl.Business.Models;
 using System.Linq.Expressions;
 
-namespace MoneyControl.Business.Interfaces;
+namespace MoneyControl.Business.Interfaces.Repository;
 
 public interface IRepository<TEntity> : IDisposable where TEntity : Entity
 {

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MoneyControl.App.Configuration;
 using MoneyControl.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services.AddDbContext<MoneyControlDbContext>(x =>
 });
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.ResolveDependencies();
 
 var app = builder.Build();
 

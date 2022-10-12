@@ -2,9 +2,9 @@
 
 namespace MoneyControl.Business.Interfaces;
 
-public interface ITransactionService
+public interface ITransactionService : IDisposable
 {
-    Task Add(Transaction transaction);
-    Task Update(Transaction transaction);
+    Task<Transaction?> Add(Transaction transaction);
+    Task<Transaction?> Update(Transaction transaction);
     Task Remove(Guid id);
 }

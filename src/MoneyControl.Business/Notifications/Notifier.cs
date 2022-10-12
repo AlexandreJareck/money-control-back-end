@@ -10,12 +10,10 @@ public class Notifier : INotifier
     {
         _notifications.Add(notification);
     }
-
     public List<Notification> GetNotifications()
     {
         return _notifications;
     }
-
     public bool HaveNotification()
     {
         return _notifications.Any();

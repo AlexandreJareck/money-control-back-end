@@ -48,7 +48,10 @@ public class TransactionController : MainController
         if (!ModelState.IsValid)
             return CustomResponse(ModelState);
 
-        await _transactionService.Add(_mapper.Map<Transaction>(transactionDTO));
+        var transaction = await _transactionService.Add(_mapper.Map<Transaction>(transactionDTO));
+
+        if (transaction != null)
+            transactionDTO.Id = transaction.Id;
 
         return CustomResponse(transactionDTO);
     }

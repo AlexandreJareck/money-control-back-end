@@ -6,12 +6,10 @@ namespace MoneyControl.App.DTOs
     {
         public const string ErrorMessage = "Campo {0} é obrigatório!";
 
-        public TransactionDTO(Guid id)
+        public TransactionDTO()
         {
-            Id = id;
             CreatedAt = DateTime.Now;
         }
-
 
         [Key]
         public Guid Id { get; set; }

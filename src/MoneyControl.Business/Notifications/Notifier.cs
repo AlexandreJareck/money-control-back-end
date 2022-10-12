@@ -6,6 +6,11 @@ public class Notifier : INotifier
 {
     private List<Notification> _notifications;
 
+    public Notifier()
+    {
+        _notifications = new List<Notification>();
+    }
+
     public void Add(Notification notification)
     {
         _notifications.Add(notification);

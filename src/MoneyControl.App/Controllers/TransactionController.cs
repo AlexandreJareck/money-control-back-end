@@ -85,4 +85,13 @@ public class TransactionController : MainController
 
         return CustomResponse(transactionDTO);
     }
+
+
+    [HttpGet("{q:string}")]
+    public async Task<ActionResult<TransactionDTO>> Query(string q)
+    {
+        var transactionDTO = _mapper.Map<TransactionDTO>(await _transactionRepository.Get(t => t.Description.Contains(q)));
+
+        return Ok(transactionDTO);
+    }
 }

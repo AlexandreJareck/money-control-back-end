@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoneyControl.App.Configuration;
 using MoneyControl.Data.Context;
@@ -22,23 +23,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("Development", builder =>
         builder
             .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-
-    options.AddDefaultPolicy(builder =>
-        builder
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-
-    options.AddPolicy("Production", builder =>
-        builder
-            .WithMethods("GET")
-            .WithOrigins("http://meusite.io")
-            .SetIsOriginAllowedToAllowWildcardSubdomains()
-            //.WithHeaders(HeaderNames.ContentType, "x-custom-header")
-            .AllowAnyHeader());
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
+
 
 var app = builder.Build();
 
@@ -46,12 +34,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("Development");
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();

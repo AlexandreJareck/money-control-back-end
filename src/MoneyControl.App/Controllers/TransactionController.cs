@@ -53,7 +53,7 @@ public class TransactionController : MainController
         if (transaction != null)
             transactionDTO.Id = transaction.Id;
 
-        return CustomResponse(transactionDTO);
+        return CustomResponse();
     }
 
     [HttpPut("{id:guid}")]
@@ -86,12 +86,11 @@ public class TransactionController : MainController
         return CustomResponse(transactionDTO);
     }
 
-
-    [HttpGet("{q:string}")]
-    public async Task<ActionResult<TransactionDTO>> Query(string q)
+    [HttpGet("get-transactions-query/")]
+    public async Task<ActionResult<IEnumerable<TransactionDTO>>> Query(string q)
     {
-        var transactionDTO = _mapper.Map<TransactionDTO>(await _transactionRepository.Get(t => t.Description.Contains(q)));
+        var transactionsDTO = _mapper.Map<IEnumerable<Transaction>>(await _transactionRepository.Get(t => t.Description.Contains(q)));
 
-        return Ok(transactionDTO);
+        return CustomResponse(transactionsDTO);
     }
 }

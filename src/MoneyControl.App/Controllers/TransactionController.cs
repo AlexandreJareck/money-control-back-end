@@ -53,7 +53,9 @@ public class TransactionController : MainController
         if (transaction != null)
             transactionDTO.Id = transaction.Id;
 
-        return CustomResponse();
+        var transactionsDTO = _mapper.Map<IEnumerable<Transaction>>(await _transactionRepository.GetAll());
+
+        return CustomResponse(transactionsDTO);
     }
 
     [HttpPut("{id:guid}")]
